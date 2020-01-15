@@ -12,7 +12,7 @@ public class updateAccountKol {
     public static void updateAccountKolOnConInsert(Map<Id,Contact> ConMap)
     {
         List<Account> accountUpdateList = new List<Account>();
-        Set<Id> accConId=new Set<Id>();
+        Set<Id> accConId=new Set<Id>() ;
         for(contact cont : ConMap.values()){
             if(cont.AccountId != null && cont.KOL__c == True)
                 accConId.add(cont.AccountId);
